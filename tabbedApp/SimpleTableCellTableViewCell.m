@@ -10,8 +10,8 @@
 
 @implementation SimpleTableCellTableViewCell
 
-    @synthesize nameLabel = _nameLabel;
-    @synthesize thumbnailImageView = _thumbnailImageView;
+@synthesize nameLabel;
+@synthesize thumbnailImageView;
 
 - (void)awakeFromNib
 {

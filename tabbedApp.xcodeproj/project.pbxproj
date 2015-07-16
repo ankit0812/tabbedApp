@@ -127,8 +127,6 @@
 		9331D8221B552022004D99FC /* tabbedApp */ = {
 			isa = PBXGroup;
 			children = (
-				936138521B5681550061A110 /* SimpleTableCellTableViewCell.h */,
-				936138531B5681550061A110 /* SimpleTableCellTableViewCell.m */,
 				931DEC631B564A020047F88E /* 1.jpg */,
 				931DEC641B564A020047F88E /* 2.jpg */,
 				931DEC651B564A020047F88E /* 3.jpg */,
@@ -149,6 +147,8 @@
 				931DEC741B564A020047F88E /* 18.jpg */,
 				931DEC751B564A020047F88E /* 19.jpg */,
 				931DEC761B564A020047F88E /* 20.jpg */,
+				936138521B5681550061A110 /* SimpleTableCellTableViewCell.h */,
+				936138531B5681550061A110 /* SimpleTableCellTableViewCell.m */,
 				9331D8271B552022004D99FC /* AppDelegate.h */,
 				9331D8281B552022004D99FC /* AppDelegate.m */,
 				9331D82A1B552022004D99FC /* FirstViewController.h */,
