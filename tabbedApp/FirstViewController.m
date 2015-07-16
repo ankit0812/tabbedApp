@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-
+#import "SimpleTableCellTableViewCell.h"
 @interface FirstViewController ()
 
 @end
@@ -43,6 +43,35 @@
     return [names count];
 }
 
+-(UIImage*)resizeImage:(UIImage *)image imageSize:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0,0,size.width,size.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    //here is the scaled image which has been changed to the size specified
+    UIGraphicsEndImageContext();
+    return newImage;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    
+    SimpleTableCellTableViewCell *cell = (SimpleTableCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SimpleTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    cell.nameLabel.text = [names objectAtIndex:indexPath.row];
+    cell.thumbnailImageView.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];
+    //cell.prepTimeLabel.text = [prepTime objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *TableIdentifier = @"NameCells";
@@ -57,9 +86,12 @@
     cell.textLabel.text = [names objectAtIndex:indexPath.row];          //adding names to the rows
 
     return cell;
-}
+}  */
 
-
+/*- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 78;
+}*/
 
 @end
 

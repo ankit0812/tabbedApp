@@ -35,6 +35,7 @@
 		9331D8341B552022004D99FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9331D8331B552022004D99FC /* Images.xcassets */; };
 		9331D8371B552022004D99FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9331D8351B552022004D99FC /* LaunchScreen.xib */; };
 		9331D8431B552023004D99FC /* tabbedAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9331D8421B552023004D99FC /* tabbedAppTests.m */; };
+		936138541B5681550061A110 /* SimpleTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 936138531B5681550061A110 /* SimpleTableCellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		9331D83C1B552023004D99FC /* tabbedAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tabbedAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9331D8411B552023004D99FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9331D8421B552023004D99FC /* tabbedAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabbedAppTests.m; sourceTree = "<group>"; };
+		936138521B5681550061A110 /* SimpleTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCellTableViewCell.h; sourceTree = "<group>"; };
+		936138531B5681550061A110 /* SimpleTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 		9331D8221B552022004D99FC /* tabbedApp */ = {
 			isa = PBXGroup;
 			children = (
+				936138521B5681550061A110 /* SimpleTableCellTableViewCell.h */,
+				936138531B5681550061A110 /* SimpleTableCellTableViewCell.m */,
 				931DEC631B564A020047F88E /* 1.jpg */,
 				931DEC641B564A020047F88E /* 2.jpg */,
 				931DEC651B564A020047F88E /* 3.jpg */,
@@ -306,6 +311,7 @@
 			files = (
 				9331D82F1B552022004D99FC /* SecondViewController.m in Sources */,
 				9331D8291B552022004D99FC /* AppDelegate.m in Sources */,
+				936138541B5681550061A110 /* SimpleTableCellTableViewCell.m in Sources */,
 				9331D82C1B552022004D99FC /* FirstViewController.m in Sources */,
 				9331D8261B552022004D99FC /* main.m in Sources */,
 			);
