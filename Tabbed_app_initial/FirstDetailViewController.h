@@ -11,8 +11,10 @@
 @interface FirstDetailViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+
 @property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
 @property (nonatomic, strong) NSString *actualName;
+
 @property (nonatomic, strong) NSString *actualImage;
 
 
