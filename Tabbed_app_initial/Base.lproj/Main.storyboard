@@ -209,7 +209,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Qc-pY-S9y">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text" base64-UTF8="YES">
+                                <string key="text" base64-UTF8="YES">
 QWJvdXQgVXMgOgpPcHRpbXVzIGlzIGRlc2lnbmVkIHRvIGhlbHAgZ2xvYmFsIG9yZ2FuaXphdGlvbnMg
 YWRkcmVzcyB0aGVpciBpbmZvcm1hdGlvbiBuZWVkcy4gVGhlIHdvcmxkIG9mIGluZm9ybWF0aW9uIGlz
 IGNoYW5naW5nIGFuZCBzbyBhcmUgdGhlIG1ldGhvZHMgb2YgbWFuYWdpbmcgaXQuIFdlIHByb3ZpZGUg
@@ -229,7 +229,7 @@ byBtaWQtc2l6ZWQgc29mdHdhcmUgY29tcGFuaWVzIGFuZCBlbnRlcnByaXNlcy4KCk9wdGltdXMgaXMg
 aGVhZHF1YXJ0ZXJlZCBpbiBWYW5jb3V2ZXIsIENhbmFkYSBhbmQgaGFzIGRlbGl2ZXJ5IGNlbnRlcnMg
 aW4gQ2FuYWRhIGFuZCBJbmRpYS4gVGhlIGZvdW5kZXJzIG9mIE9wdGltdXMgaGF2ZSBleHRlbnNpdmUg
 ZXhwZXJpZW5jZSBydW5uaW5nIGxhcmdlIGdsb2JhbCBvdXRzb3VyY2luZyBjb21wYW5pZXMuA
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -292,6 +292,6 @@ ZXhwZXJpZW5jZSBydW5uaW5nIGxhcmdlIGdsb2JhbCBvdXRzb3VyY2luZyBjb21wYW5pZXMuA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dug-0o-ZJt"/>
-        <segue reference="ClO-MR-BHk"/>
+        <segue reference="oh1-Wr-c3Q"/>
     </inferredMetricsTieBreakers>
 </document>

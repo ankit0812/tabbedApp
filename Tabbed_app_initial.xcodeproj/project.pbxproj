@@ -112,25 +112,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DBC9529B1B551DF200FBE1E3 = {
-			isa = PBXGroup;
-			children = (
-				DBC952A61B551DF200FBE1E3 /* Tabbed_app_initial */,
-				DBC952C31B551DF200FBE1E3 /* Tabbed_app_initialTests */,
-				DBC952A51B551DF200FBE1E3 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		DBC952A51B551DF200FBE1E3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DBC952A41B551DF200FBE1E3 /* Tabbed_app_initial.app */,
-				DBC952C01B551DF200FBE1E3 /* Tabbed_app_initialTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DBC952A61B551DF200FBE1E3 /* Tabbed_app_initial */ = {
+		93F4E5BD1B70704D00C3F479 /* Image Folder */ = {
 			isa = PBXGroup;
 			children = (
 				934D6E261B58A70A0065F9C7 /* 1.jpg */,
@@ -153,22 +135,72 @@
 				934D6E371B58A70A0065F9C7 /* 18.jpg */,
 				934D6E381B58A70A0065F9C7 /* 19.jpg */,
 				934D6E391B58A70A0065F9C7 /* 20.jpg */,
-				DBC952AB1B551DF200FBE1E3 /* AppDelegate.h */,
-				DBC952AC1B551DF200FBE1E3 /* AppDelegate.m */,
+			);
+			name = "Image Folder";
+			sourceTree = "<group>";
+		};
+		93F4E5BE1B70706B00C3F479 /* Grid View */ = {
+			isa = PBXGroup;
+			children = (
 				934D6E501B58AB110065F9C7 /* SimpleTableCell.h */,
 				934D6E511B58AB110065F9C7 /* SimpleTableCell.m */,
-				93B5B3D11B58AD2C00A639EB /* FirstDetailViewController.h */,
-				93B5B3D21B58AD2C00A639EB /* FirstDetailViewController.m */,
 				DBC952AE1B551DF200FBE1E3 /* FirstViewController.h */,
 				DBC952AF1B551DF200FBE1E3 /* FirstViewController.m */,
+			);
+			name = "Grid View";
+			sourceTree = "<group>";
+		};
+		93F4E5BF1B70708400C3F479 /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				DBF0F8A11B577FDC00732B70 /* SecondCollectionViewController.h */,
+				DBF0F8A21B577FDC00732B70 /* SecondCollectionViewController.m */,
+			);
+			name = "Collection View";
+			sourceTree = "<group>";
+		};
+		93F4E5C11B7070B000C3F479 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				93B5B3D11B58AD2C00A639EB /* FirstDetailViewController.h */,
+				93B5B3D21B58AD2C00A639EB /* FirstDetailViewController.m */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
+		DBC9529B1B551DF200FBE1E3 = {
+			isa = PBXGroup;
+			children = (
+				DBC952A61B551DF200FBE1E3 /* Tabbed_app_initial */,
+				DBC952C31B551DF200FBE1E3 /* Tabbed_app_initialTests */,
+				DBC952A51B551DF200FBE1E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBC952A51B551DF200FBE1E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBC952A41B551DF200FBE1E3 /* Tabbed_app_initial.app */,
+				DBC952C01B551DF200FBE1E3 /* Tabbed_app_initialTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBC952A61B551DF200FBE1E3 /* Tabbed_app_initial */ = {
+			isa = PBXGroup;
+			children = (
+				93F4E5C11B7070B000C3F479 /* Detail View */,
+				93F4E5BF1B70708400C3F479 /* Collection View */,
+				93F4E5BE1B70706B00C3F479 /* Grid View */,
+				93F4E5BD1B70704D00C3F479 /* Image Folder */,
+				DBC952AB1B551DF200FBE1E3 /* AppDelegate.h */,
+				DBC952AC1B551DF200FBE1E3 /* AppDelegate.m */,
+				93F4E5BA1B70671F00C3F479 /* ViewController.h */,
+				93F4E5BB1B70671F00C3F479 /* ViewController.m */,
 				DBC952B41B551DF200FBE1E3 /* Main.storyboard */,
 				DBC952B71B551DF200FBE1E3 /* Images.xcassets */,
 				DBC952B91B551DF200FBE1E3 /* LaunchScreen.xib */,
 				DBC952A71B551DF200FBE1E3 /* Supporting Files */,
-				DBF0F8A11B577FDC00732B70 /* SecondCollectionViewController.h */,
-				DBF0F8A21B577FDC00732B70 /* SecondCollectionViewController.m */,
-				93F4E5BA1B70671F00C3F479 /* ViewController.h */,
-				93F4E5BB1B70671F00C3F479 /* ViewController.m */,
 			);
 			path = Tabbed_app_initial;
 			sourceTree = "<group>";
