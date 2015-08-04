@@ -35,7 +35,7 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.collectionView.backgroundColor = [UIColor grayColor];  // Setting Background to gray
+    self.collectionView.backgroundColor = [UIColor whiteColor];  // Setting Background to gray
     
     //Initializing the data
     
@@ -57,9 +57,8 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-   return image.count;
+   return 3;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,6 +66,7 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     UIImageView *ImageView = (UIImageView *)[cell viewWithTag:100];
+    
     ImageView.image = [UIImage imageNamed:[image objectAtIndex:indexPath.row]];
     return cell;
 }
@@ -90,17 +90,6 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
     }
 }
 
-/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"bigImage"])
-    {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        FirstDetailViewController *destViewController = segue.destinationViewController;
-        destViewController.actualName = [names objectAtIndex:indexPath.row];
-        destViewController.actualImage =[images objectAtIndex:indexPath.row];
-    }
-}
-*/
 
 
 #pragma mark <UICollectionViewDelegate>
