@@ -38,9 +38,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.collectionView.backgroundColor = [UIColor grayColor];
     
-         image=[NSArray arrayWithObjects:@"1.jpg", @"2.jpg", @"3.jpg", @"4.jpg",@"5.jpg",@"6.jpg",@"7.jpg",@"8.jpg", @"9.jpg", @"10.jpg", @"11.jpg", @"12.jpg", @"13.jpg", @"14.jpg", @"15.jpg", @"16.jpg", @"17.jpg", @"18.jpg", @"19.jpg", @"20.jpg", nil];
-         names = [NSArray arrayWithObjects:@"Ankit", @"Menka", @"Abhishek Jha", @"Abhishek Roy", @"Akshi Bansal", @"Naveta Grover", @"Darsheel", @"Mayank", @"Neha", @"Nikhil", @"Priyansha", @"Shreya", @"Vidushi", @"Ansari", @"Divyansh", @"Aashi", @"Apoorv", @"Adit", @"Aditya", nil];
+    image = [NSArray arrayWithObjects:@"1.jpg", @"2.jpg", @"3.jpg", @"4.jpg", @"5.jpg", @"6.jpg", @"7.jpg", @"8.jpg", @"9.jpg", @"10.jpg", @"11.jpg", @"12.jpg", @"13.jpg", @"14.jpg", @"15.jpg", @"16.jpg", @"17.jpg", @"18.jpg", @"19.jpg", @"20.jpg", nil];
     
+    names = [NSArray arrayWithObjects:@"Ankit", @"Menka", @"Abhishek Jha", @"Abhishek Roy", @"Akshi ", @"Naveta Dey", @"Darsheel", @"Mayank", @"Neha", @"Nikhil", @"Priyansha", @"Shreya", @"Vidushi", @"Ansari", @"Divyansh", @"Aashi", @"Apoorv", @"Adit", @"Aditya", @"Taha", nil];
 
 }
 
@@ -89,8 +89,12 @@ static NSString * const reuseIdentifier = @"Cell";
         SecondCollectionViewController *destViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
         destViewController.actualImage=[image objectAtIndex:indexPath.row];
+            NSLog(@" Hello    %@",destViewController.actualImage);
+        
+        
         destViewController.actualName = [names objectAtIndex:indexPath.row];
-
+      
+          NSLog(@"%@",destViewController.actualName);
         [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
         
     }

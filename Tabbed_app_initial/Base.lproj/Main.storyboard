@@ -55,7 +55,14 @@
                             <outlet property="delegate" destination="9pv-A4-QxB" id="8zQ-8F-Wdh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Grid View Display" id="aOb-ia-Ubz"/>
+                    <navigationItem key="navigationItem" title="Grid View Display" id="aOb-ia-Ubz">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="Wgz-zT-ssd">
+                            <connections>
+                                <action selector="aboutUs:" destination="9pv-A4-QxB" id="tXM-ea-HtU"/>
+                                <segue destination="ziP-Mf-Z12" kind="show" identifier="about1" id="oh1-Wr-c3Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dyb-z3-kf1" id="Q9o-1b-U0G"/>
                     </connections>
@@ -124,7 +131,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="6"/>
+            <point key="canvasLocation" x="-726" y="-155"/>
         </scene>
         <!--Collection View Display-->
         <scene sceneID="mBl-5Q-viO">
@@ -172,7 +179,13 @@
                             <outlet property="delegate" destination="hRz-DM-wDW" id="rlA-bA-7ae"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Collection View Display" id="Bv8-CB-C17"/>
+                    <navigationItem key="navigationItem" title="Collection View Display" id="Bv8-CB-C17">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="LAG-aK-Zyh">
+                            <connections>
+                                <segue destination="ziP-Mf-Z12" kind="show" id="ClO-MR-BHk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collView" destination="PGK-en-NET" id="ucG-cI-uKB"/>
                     </connections>
@@ -180,6 +193,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Nw-yJ-g58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1570" y="334"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vnu-x2-0Ny">
+            <objects>
+                <viewController id="ziP-Mf-Z12" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n2f-HU-dlF"/>
+                        <viewControllerLayoutGuide type="bottom" id="5xJ-QW-PrN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ecU-Gd-G2K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Qc-pY-S9y">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text" base64-UTF8="YES">
+QWJvdXQgVXMgOgpPcHRpbXVzIGlzIGRlc2lnbmVkIHRvIGhlbHAgZ2xvYmFsIG9yZ2FuaXphdGlvbnMg
+YWRkcmVzcyB0aGVpciBpbmZvcm1hdGlvbiBuZWVkcy4gVGhlIHdvcmxkIG9mIGluZm9ybWF0aW9uIGlz
+IGNoYW5naW5nIGFuZCBzbyBhcmUgdGhlIG1ldGhvZHMgb2YgbWFuYWdpbmcgaXQuIFdlIHByb3ZpZGUg
+b3V0c291cmNlZCB0ZWNobm9sb2d5IHNlcnZpY2VzIHRvIG1pZC1zaXplZCBvcmdhbml6YXRpb25zIHdo
+byBoYXZlIGRpZmZlcmVudCBuZWVkcyB0aGFuIEZvcnR1bmUgNTAwIGNvbXBhbmllcy4gT3B0aW11cyBp
+cyBkZXNpZ25lZCB0byBtZWV0IHRoZXNlIHNwZWNpZmljIG5lZWRzLhAQEBAKClRoZSBkZW1hbmQgZm9y
+IG91dHNvdXJjZWQgdGVjaG5vbG9neSBzZXJ2aWNlcyBpcyBpbmNyZWFzaW5nIGFzIG9yZ2FuaXphdGlv
+bnMgc2VlayB0byBpbmNyZWFzZSB0aGVpciBlZmZpY2llbmN5LiBUaGlzIHRyZW5kIGhhcyBiZWVuIGlt
+cHJvdmVkIHRocm91Z2ggYWR2YW5jZW1lbnRzIGluIHRlY2hub2xvZ3kgYW5kIHRlbGVjb21tdW5pY2F0
+aW9ucyB0aGF0IG5vdyBhbGxvdyBvdXRzb3VyY2luZyBzZXJ2aWNlcyB0byBvZmZlciBzZWFtbGVzcyBz
+ZXJ2aWNlcyBhbGwgb3ZlciB0aGUgZ2xvYmUuCgpUaG91Z2ggb3V0c291cmNpbmcgaXMgYSBtYXR1cmlu
+ZyBtYXJrZXQsIG1pZC1zaXplZCBzb2Z0d2FyZSBjb21wYW5pZXMgYW5kIGVudGVycHJpc2VzIG9mdGVu
+IHN0cnVnZ2xlIHRvIGZpbmQgYSByZWxpYWJsZSwgbmltYmxlLCBhbmQgY2FwYWJsZSBvdXRzb3VyY2lu
+ZyB2ZW5kb3IuIE9wdGltdXMgaGFzIHRoZSByaWdodCBtaXggb2Ygc2l6ZSwgZmxleGliaWxpdHksIGFu
+ZCBleHBlcmllbmNlIHRvIHByb3ZpZGUgaGlnaCBxdWFsaXR5IG91dHNvdXJjaW5nIHNvbHV0aW9ucyB0
+byBtaWQtc2l6ZWQgc29mdHdhcmUgY29tcGFuaWVzIGFuZCBlbnRlcnByaXNlcy4KCk9wdGltdXMgaXMg
+aGVhZHF1YXJ0ZXJlZCBpbiBWYW5jb3V2ZXIsIENhbmFkYSBhbmQgaGFzIGRlbGl2ZXJ5IGNlbnRlcnMg
+aW4gQ2FuYWRhIGFuZCBJbmRpYS4gVGhlIGZvdW5kZXJzIG9mIE9wdGltdXMgaGF2ZSBleHRlbnNpdmUg
+ZXhwZXJpZW5jZSBydW5uaW5nIGxhcmdlIGdsb2JhbCBvdXRzb3VyY2luZyBjb21wYW5pZXMuA
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Qc-pY-S9y" firstAttribute="leading" secondItem="ecU-Gd-G2K" secondAttribute="leading" id="GK2-cU-J8g"/>
+                            <constraint firstItem="2Qc-pY-S9y" firstAttribute="top" secondItem="n2f-HU-dlF" secondAttribute="bottom" id="KHf-ZB-Pln"/>
+                            <constraint firstAttribute="trailing" secondItem="2Qc-pY-S9y" secondAttribute="trailing" id="Rmc-B8-3WN"/>
+                            <constraint firstItem="2Qc-pY-S9y" firstAttribute="bottom" secondItem="5xJ-QW-PrN" secondAttribute="top" id="vOI-sg-Iw1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fY8-0t-nqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578" y="1657"/>
         </scene>
         <!--Tab 1-->
         <scene sceneID="MWN-WE-YSn">
@@ -226,5 +292,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dug-0o-ZJt"/>
+        <segue reference="ClO-MR-BHk"/>
     </inferredMetricsTieBreakers>
 </document>
