@@ -58,7 +58,7 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-   return 3;
+   return image.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

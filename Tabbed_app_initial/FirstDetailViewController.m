@@ -26,8 +26,11 @@
     // Do any additional setup after loading the view.
     // Set the Label text with the selected recipe
     nameLabel.text=actualName;
+    
     thumbnailImageView.image=[UIImage imageNamed:actualImage];
     
+    
+    //thumbnailImageView=[thumbnailImageView.image scaleToSize:CGSizeMake(100.0f,100.0f)]
  }
 
 
