@@ -1,6 +1,4 @@
 //
-
-//
 //  SimpleTableCell.h
 //  Tabbed_app_initial
 //

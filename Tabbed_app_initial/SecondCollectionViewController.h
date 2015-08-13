@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondCollectionViewController : UICollectionViewController <UITableViewDelegate,UITableViewDelegate>
+@interface SecondCollectionViewController : UICollectionViewController <UITableViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UICollectionView *collView;
+
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) NSString *actualName;
 @property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;

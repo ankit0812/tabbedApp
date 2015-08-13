@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstDetailViewController : UIViewController
+{
+    NSString *s;
+}
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 

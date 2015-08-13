@@ -20,17 +20,17 @@
 @synthesize actualName;
 @synthesize actualImage;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // Set the Label text with the selected recipe
+    
+    
+    // Taking value from the segue in adding it to the view on label and UIImageView
     nameLabel.text=actualName;
-    
     thumbnailImageView.image=[UIImage imageNamed:actualImage];
-    
-    
-    //thumbnailImageView=[thumbnailImageView.image scaleToSize:CGSizeMake(100.0f,100.0f)]
+
  }
 
 

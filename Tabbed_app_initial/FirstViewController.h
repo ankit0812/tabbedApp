@@ -11,6 +11,6 @@
 
 @interface FirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> //Delegates and data sources
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 
 @end

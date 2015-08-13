@@ -72,6 +72,8 @@
 		934D6E391B58A70A0065F9C7 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
 		934D6E501B58AB110065F9C7 /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		934D6E511B58AB110065F9C7 /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
+		93760FA81B7C9F46005241B3 /* PrivateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateViewController.h; sourceTree = "<group>"; };
+		93760FAE1B7CB213005241B3 /* PrivateCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateCollectionViewController.h; sourceTree = "<group>"; };
 		938DD70A1B58E4EC00321CD5 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		93B5B3D11B58AD2C00A639EB /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
 		93B5B3D21B58AD2C00A639EB /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
@@ -139,15 +141,16 @@
 			name = "Image Folder";
 			sourceTree = "<group>";
 		};
-		93F4E5BE1B70706B00C3F479 /* Grid View */ = {
+		93F4E5BE1B70706B00C3F479 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
 				934D6E501B58AB110065F9C7 /* SimpleTableCell.h */,
 				934D6E511B58AB110065F9C7 /* SimpleTableCell.m */,
 				DBC952AE1B551DF200FBE1E3 /* FirstViewController.h */,
 				DBC952AF1B551DF200FBE1E3 /* FirstViewController.m */,
+				93760FA81B7C9F46005241B3 /* PrivateViewController.h */,
 			);
-			name = "Grid View";
+			name = TableView;
 			sourceTree = "<group>";
 		};
 		93F4E5BF1B70708400C3F479 /* Collection View */ = {
@@ -155,6 +158,7 @@
 			children = (
 				DBF0F8A11B577FDC00732B70 /* SecondCollectionViewController.h */,
 				DBF0F8A21B577FDC00732B70 /* SecondCollectionViewController.m */,
+				93760FAE1B7CB213005241B3 /* PrivateCollectionViewController.h */,
 			);
 			name = "Collection View";
 			sourceTree = "<group>";
@@ -189,17 +193,17 @@
 		DBC952A61B551DF200FBE1E3 /* Tabbed_app_initial */ = {
 			isa = PBXGroup;
 			children = (
-				93F4E5C11B7070B000C3F479 /* Detail View */,
+				93F4E5BE1B70706B00C3F479 /* TableView */,
 				93F4E5BF1B70708400C3F479 /* Collection View */,
-				93F4E5BE1B70706B00C3F479 /* Grid View */,
+				93F4E5C11B7070B000C3F479 /* Detail View */,
 				93F4E5BD1B70704D00C3F479 /* Image Folder */,
 				DBC952AB1B551DF200FBE1E3 /* AppDelegate.h */,
 				DBC952AC1B551DF200FBE1E3 /* AppDelegate.m */,
 				93F4E5BA1B70671F00C3F479 /* ViewController.h */,
 				93F4E5BB1B70671F00C3F479 /* ViewController.m */,
 				DBC952B41B551DF200FBE1E3 /* Main.storyboard */,
-				DBC952B71B551DF200FBE1E3 /* Images.xcassets */,
 				DBC952B91B551DF200FBE1E3 /* LaunchScreen.xib */,
+				DBC952B71B551DF200FBE1E3 /* Images.xcassets */,
 				DBC952A71B551DF200FBE1E3 /* Supporting Files */,
 			);
 			path = Tabbed_app_initial;

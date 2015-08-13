@@ -12,6 +12,8 @@
 
 @interface FirstViewController ()
 
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation FirstViewController{
@@ -48,6 +50,7 @@
     return [names count];
 }
 
+//Configuring and Populating the cell
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -72,6 +75,7 @@
 # pragma mark - Segue Operation
 
 // Passing Control  to the Detail View Controller along with the values
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if ([segue.identifier isEqualToString:@"showNamesDetail"]){

@@ -15,9 +15,14 @@
     NSArray *image;
     NSArray *names;
 }
+
+@property (nonatomic, strong) IBOutlet UICollectionView *collView;
 @end
 
 @implementation SecondCollectionViewController
+
+
+//initializing the nib as we are creating our view in code
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,17 +33,16 @@
     return self;
 }
 
+static NSString * const reuseIdentifier = @"Cell";  // Cell Indentifier
 
-
-static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];  // Setting Background to gray
+    self.collectionView.backgroundColor = [UIColor whiteColor];  // Setting Background to white
+    
     
     //Initializing the data
-    
     image = [NSArray arrayWithObjects:@"1.jpg", @"2.jpg", @"3.jpg", @"4.jpg", @"5.jpg", @"6.jpg", @"7.jpg", @"8.jpg", @"9.jpg", @"10.jpg", @"11.jpg", @"12.jpg", @"13.jpg", @"14.jpg", @"15.jpg", @"16.jpg", @"17.jpg", @"18.jpg", @"19.jpg", @"20.jpg", nil];
     
     names = [NSArray arrayWithObjects:@"Ankit", @"Menka", @"Abhishek Jha", @"Abhishek Roy", @"Akshi ", @"Naveta Dey", @"Darsheel", @"Mayank", @"Neha", @"Nikhil", @"Priyansha", @"Shreya", @"Vidushi", @"Ansari", @"Divyansh", @"Aashi", @"Apoorv", @"Adit", @"Aditya", @"Taha", nil];
@@ -49,6 +53,20 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)viewDidAppear:(BOOL)animated{
+    //Reloads CollectionView while switching tabs
+    [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
+    
+}
+//Reloads CollectionView when the device is being rotated
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    
+    [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
+}
+
 
 #pragma mark <UICollectionViewDataSource> Initialise the datasource for the collection view
 
@@ -61,6 +79,8 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
    return image.count;
 }
 
+//Initializing and returning the Cells of Collection View
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier=@"Cell";
     
@@ -71,6 +91,8 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
     return cell;
 }
 
+//Sending Data to Detail View Controller
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"bigImage"]){
@@ -79,18 +101,35 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
         SecondCollectionViewController *destViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
         destViewController.actualImage=[image objectAtIndex:indexPath.row];
-            NSLog(@" Hello    %@",destViewController.actualImage);
-        
         
         destViewController.actualName = [names objectAtIndex:indexPath.row];
       
-          NSLog(@"%@",destViewController.actualName);
         [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
         
     }
 }
 
 
+#pragma mark – FlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath                        //For setting 3 images per row
+{
+;
+    CGSize retval;
+    if(([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight) || ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft))
+    {
+        
+           retval = CGSizeMake(collectionView.frame.size.width/4, 100);
+    }
+    else {
+        
+    retval = CGSizeMake(collectionView.frame.size.width/4, 100);
+    }
+ 
+    return retval;
+    
+    
+}
 
 #pragma mark <UICollectionViewDelegate>
 
@@ -115,5 +154,7 @@ static NSString * const reuseIdentifier = @"Cell";         // Cell Indentifier
 	
 }
 */
+
+
 
 @end
